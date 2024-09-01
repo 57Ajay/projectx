@@ -25,6 +25,7 @@ const Home = () => {
                 />
 
             </header>
+            
         </div>
 
     </section>
