@@ -1,7 +1,7 @@
 'use server';
 
 import { ID, Query } from "node-appwrite";
-import { createAdminClient, createSessionClient } from "../appwrite";
+import { createAdminClient, createSessionClient } from "../appwrite"
 import { cookies } from "next/headers";
 import { encryptId, extractCustomerIdFromUrl, parseStringify } from "../utils";
 import { CountryCode, ProcessorTokenCreateRequest, ProcessorTokenCreateRequestProcessorEnum, Products } from "plaid";
@@ -41,7 +41,7 @@ export const signIn = async ({ email, password }: signInProps) => {
       path: "/",
       httpOnly: true,
       sameSite: "strict",
-      secure: true,
+      secure: true, 
     });
 
     const user = await getUserInfo({ userId: session.userId }) 
@@ -118,6 +118,7 @@ export async function getLoggedInUser() {
     return null;
   }
 }
+
 
 export const logoutAccount = async () => {
   try {
